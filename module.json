@@ -1,0 +1,27 @@
+{
+  "name": "l5r-dragruler",
+  "title": "L5R Drag Ruler Conversion",
+  "description": "A Drag Ruler [] Conversion for the L5R Ruleset",
+  "author": "Lisa Ngo",
+  "minimumCoreVersion": "0.8.8",
+  "socket":  true,
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "dependencies": [
+    {
+      "name": "drag-ruler",
+      "type": "module",
+      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
+    },
+    {
+      "name": "lib-wrapper"
+    }
+  ],
+  "version": "1"
+}
+//TODO?
+//If someone is next to you, you are Entangled and lose a square of movement.
+//Neaten out the areas of movement
+//Make Terrain Matter?
+//Diagonal/Resolving Movement etc
