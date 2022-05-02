@@ -5,6 +5,7 @@
   "author": "Lisa Ngo",
   "minimumCoreVersion": "0.8.8",
   "socket":  true,
+  "systems": ["l5r5e"],
   "esmodules": [
     "scripts/main.js"
   ],
@@ -20,6 +21,6 @@
   ],
   "version": "1",
   "url": "https://github.com/FoxDen/L5R-Dragruler",
-	"download": "https://github.com/FoxDen/L5R-Dragruler/archive/refs/tags/V.1.0.0.zip",
-	"manifest": "https://raw.githubusercontent.com/FoxDen/L5R-Dragruler/master/module.json"
+  "download": "https://github.com/FoxDen/L5R-Dragruler/archive/refs/tags/V.1.0.0.zip",
+  "manifest": "https://raw.githubusercontent.com/FoxDen/L5R-Dragruler/master/module.json"
 }
