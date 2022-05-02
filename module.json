@@ -18,5 +18,8 @@
       "name": "lib-wrapper"
     }
   ],
-  "version": "1"
+  "version": "1",
+  "url": "https://github.com/FoxDen/L5R-Dragruler",
+	"download": "https://github.com/FoxDen/L5R-Dragruler/archive/refs/tags/V.1.0.0.zip",
+	"manifest": "https://raw.githubusercontent.com/FoxDen/L5R-Dragruler/master/module.json"
 }
