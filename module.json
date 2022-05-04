@@ -4,6 +4,7 @@
   "description": "A Drag Ruler [] Conversion for the L5R Ruleset",
   "author": "Lisa Ngo",
   "minimumCoreVersion": "0.8.8",
+  "compatibleCoreVersion" : "9",
   "socket":  true,
   "systems": ["l5r5e"],
   "esmodules": [
