@@ -33,17 +33,20 @@ Hooks.once("canvasInit", () => {
     if (game.modules.get("enhanced-terrain-layer")?.active) {
         canvas.terrain.getEnvironments = function () {
             return [
-                { id: 'dangerous', text: game.i18n.localize('l5r-dragruler.ranges.terrain.dangerous'), icon: '' },
-                { id: 'defiled', text: game.i18n.localize('l5r-dragruler.ranges.terrain.defiled'), icon: '' },
-                { id: 'entangling', text: game.i18n.localize('l5r-dragruler.ranges.terrain.entangling'), icon: '' },
-                { id: 'hallowed', text: game.i18n.localize('l5r-dragruler.ranges.terrain.hallowed'), icon: '' },
-                { id: 'imbalanced', text: game.i18n.localize('l5r-dragruler.ranges.terrain.imbalanced'), icon: '' },
-                { id: 'obscuring', text: game.i18n.localize('l5r-dragruler.ranges.terrain.obscuring'), icon: '' },
-                { id: 'confining', text: game.i18n.localize('l5r-dragruler.ranges.terrain.confining'), icon: '' },
-                { id: 'elevated', text: game.i18n.localize('l5r-dragruler.ranges.terrain.elevated'), icon: '' },
-                { id: 'open', text: game.i18n.localize('l5r-dragruler.ranges.terrain.open'), icon: '' },
-                { id: 'recessed', text: game.i18n.localize('l5r-dragruler.ranges.terrain.recessed'), icon: '' }
-            ]
+                { id: 'dangerous', icon: '' },
+                { id: 'defiled', icon: '' },
+                { id: 'entangling', icon: '' },
+                { id: 'hallowed', icon: '' },
+                { id: 'imbalanced', icon: '' },
+                { id: 'obscuring', icon: '' },
+                { id: 'confining', icon: '' },
+                { id: 'elevated', icon: '' },
+                { id: 'open', icon: '' },
+                { id: 'recessed', icon: '' }
+            ].map(entry => {
+                entry.text = game.i18n.localize('l5r-dragruler.ranges.terrain.' + entry.id);
+                return entry;
+            })
         }
     }
 })
@@ -51,14 +54,17 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
     class LegendOfTheFiveRingsSpeedProvider extends SpeedProvider {
         get colors(){
             return [
-                { id: 'touchRange', default: 0xB71C1C, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.touch') }, //scorpion
-                { id: 'swordRange', default: 0xF9A825, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.sword') }, //lion
-                { id: 'spearRange', default: 0x0288D1, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.spear') }, //crane
-                { id: 'throwRange', default: 0x546E7A, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.throw') }, //crab
-                { id: 'bowRange', default: 0xF4511E, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.bow') }, //phoenix
-                { id: 'volleyRange', default: 0x9CCC65, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.volley') }, //dragon
-                { id: 'sightRange', default: 0xBA68C8, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.sight') } //unicorn
-            ]
+                { id: 'touchRange', default: 0xB71C1C }, //scorpion
+                { id: 'swordRange', default: 0xF9A825 }, //lion
+                { id: 'spearRange', default: 0x0288D1 }, //crane
+                { id: 'throwRange', default: 0x546E7A }, //crab
+                { id: 'bowRange', default: 0xF4511E }, //phoenix
+                { id: 'volleyRange', default: 0x9CCC65 }, //dragon
+                { id: 'sightRange', default: 0xBA68C8  } //unicorn
+            ].map(entry => {
+                entry.name = game.i18n.localize('l5r-dragruler.ranges.weapon_desc.' + entry.id);
+                return entry;
+            })
         }
         getRanges() {
             const baseSpeed = 1;

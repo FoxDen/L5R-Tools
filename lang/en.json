@@ -35,13 +35,13 @@
       },
 
       "weapon_desc": {
-        "touch": "Touch range (1-2 feet)",
-        "sword": "Sword range (1-2 yards)",
-        "spear": "Spear range (3-4 yards)",
-        "throwing": "Throwing weapon range (5-10 yards)",
-        "bow": "Bow range (11-100 yards)",
-        "volley": "Volley range (100+ yards)",
-        "sight": "Vision range"
+        "touchRange": "Touch range (1-2 feet)",
+        "swordRange": "Sword range (1-2 yards)",
+        "spearRange": "Spear range (3-4 yards)",
+        "throwRange": "Throwing weapon range (5-10 yards)",
+        "bowRange": "Bow range (11-100 yards)",
+        "volleyRange": "Volley range (100+ yards)",
+        "sightRange": "Vision range"
       },
       "weapon": {
         "touch": "Touch range",
