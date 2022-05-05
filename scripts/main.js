@@ -33,16 +33,16 @@ Hooks.once("canvasInit", () => {
     if (game.modules.get("enhanced-terrain-layer")?.active) {
         canvas.terrain.getEnvironments = function () {
             return [
-                { id: 'dangerous', text: 'Dangerous', icon: '' },
-                { id: 'defiled', text: 'Defiled', icon: '' },
-                { id: 'entangling', text: 'Entangling', icon: '' },
-                { id: 'hallowed', text: 'Hallowed', icon: '' },
-                { id: 'imbalanced', text: 'Imbalanced', icon: '' },
-                { id: 'obscuring', text: 'Obscuring', icon: '' },
-                { id: 'confining', text: 'Confining', icon: '' },
-                { id: 'elevated', text: 'Elevated', icon: '' },
-                { id: 'open', text: 'Open', icon: '' },
-                { id: 'recessed', text: 'Recessed', icon: '' }
+                { id: 'dangerous', text: game.i18n.localize('l5r-dragruler.ranges.terrain.dangerous'), icon: '' },
+                { id: 'defiled', text: game.i18n.localize('l5r-dragruler.ranges.terrain.defiled'), icon: '' },
+                { id: 'entangling', text: game.i18n.localize('l5r-dragruler.ranges.terrain.entangling'), icon: '' },
+                { id: 'hallowed', text: game.i18n.localize('l5r-dragruler.ranges.terrain.hallowed'), icon: '' },
+                { id: 'imbalanced', text: game.i18n.localize('l5r-dragruler.ranges.terrain.imbalanced'), icon: '' },
+                { id: 'obscuring', text: game.i18n.localize('l5r-dragruler.ranges.terrain.obscuring'), icon: '' },
+                { id: 'confining', text: game.i18n.localize('l5r-dragruler.ranges.terrain.confining'), icon: '' },
+                { id: 'elevated', text: game.i18n.localize('l5r-dragruler.ranges.terrain.elevated'), icon: '' },
+                { id: 'open', text: game.i18n.localize('l5r-dragruler.ranges.terrain.open'), icon: '' },
+                { id: 'recessed', text: game.i18n.localize('l5r-dragruler.ranges.terrain.recessed'), icon: '' }
             ]
         }
     }
@@ -51,13 +51,13 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
     class LegendOfTheFiveRingsSpeedProvider extends SpeedProvider {
         get colors(){
             return [
-                { id: "touchRange", default: 0xB71C1C, name: "Touch Range (1-2 feet)"}, //scorpion
-                { id: "swordRange", default: 0xF9A825, name: "Sword Range (1-2 yards)"}, //lion
-                { id: "spearRange", default: 0x0288D1, name: "Spear Range (3-4 yards)"}, //crane
-                {id: "throwRange", default: 0x546E7A, name: "Throwing Range (5-10 yards)"}, //crab
-                { id: "bowRange", default: 0xF4511E, name: "Bow Range (11-100 yards)"}, //phoenix
-                { id: "volleyRange", default: 0x9CCC65, name: "Volley Range (100+ yards)"}, //dragon
-                { id: "sightRange", default: 0xBA68C8, name: "Sight Range"} //unicorn
+                { id: 'touchRange', default: 0xB71C1C, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.touch') }, //scorpion
+                { id: 'swordRange', default: 0xF9A825, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.sword') }, //lion
+                { id: 'spearRange', default: 0x0288D1, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.spear') }, //crane
+                { id: 'throwRange', default: 0x546E7A, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.throw') }, //crab
+                { id: 'bowRange', default: 0xF4511E, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.bow') }, //phoenix
+                { id: 'volleyRange', default: 0x9CCC65, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.volley') }, //dragon
+                { id: 'sightRange', default: 0xBA68C8, name: game.i18n.localize('l5r-dragruler.ranges.weapon_desc.sight') } //unicorn
             ]
         }
         getRanges() {
@@ -78,48 +78,48 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 })
 
 function registerSettings() {
-    game.settings.register("l5r-dragruler", "dragRulerSupport", {
-        name: "l5r-dragruler.settings.dragRulerSupport.name",
-        hint: "l5r-dragruler.settings.dragRulerSupport.hint",
-        scope: "client",
+    game.settings.register('l5r-dragruler', 'dragRulerSupport', {
+        name: game.i18n.localize('l5r-dragruler.settings.dragRulerSupport.name'),
+        hint: game.i18n.localize('l5r-dragruler.settings.dragRulerSupport.hint'),
+        scope: 'client',
         default: true,
-    });
-    game.settings.register("l5r-dragruler","setZeroBased", {
-        name: "Set zero based range band.",
-        hint: "Sets range band to begin at position 0.",
-        scope: "client",
+    })
+    game.settings.register('l5r-dragruler', 'setZeroBased', {
+        name: game.i18n.localize('l5r-dragruler.settings.setZeroBased.name'),
+        hint: game.i18n.localize('l5r-dragruler.settings.setZeroBased.hint'),
+        scope: 'client',
         config: true,
-		type: Boolean,
-		default: false,
+        type: Boolean,
+        default: false,
     })
 }
 function getAllPreviousRayWidths() {
 
 }
 function changeLabelNames(text, zerobased) {
-    let returnedText = "";
-    let regexResult = text.split(' ');
-    let zeroRange = (zerobased)? 1 : 0;
+    let returnedText = "out_of";
+    const regexResult = text.split(' ');
+    const zeroRange = (zerobased) ? 1 : 0;
+
     if (regexResult && regexResult[0]) {
-        var parsedFloat = parseFloat(regexResult[0]);
+        const parsedFloat = parseFloat(regexResult[0])
         if (parsedFloat <= (1 - zeroRange)) {
-            returnedText = "Touch";
+            returnedText = 'touch'
         } else if (parsedFloat <= (2 - zeroRange)) {
-            returnedText = "Sword";
+            returnedText = 'sword'
         } else if (parsedFloat <= (3 - zeroRange)) {
-            returnedText = "Spear";
+            returnedText = 'spear'
         } else if (parsedFloat <= (6 - zeroRange)) {
-            returnedText = "Throwing";
+            returnedText = 'throwing'
         } else if (parsedFloat <= (10 - zeroRange)) {
-            returnedText = "Bow";
+            returnedText = 'bow'
         } else if (parsedFloat <= (15 - zeroRange)) {
-            returnedText = "Volley";
+            returnedText = 'volley'
         } else if (parsedFloat <= (20 - zeroRange)) {
-            returnedText = "Sight";
-        } else {
-            returnedText = "Out of";
+            returnedText = 'sight'
         }
     }
-    var square = (regexResult[0]<=1)? " square" : " squares";
-    return returnedText + " Range" + " [" + regexResult[0] + square + "]";
+
+    const square = ' ' + game.i18n.localize('l5r-dragruler.' + ((regexResult[0] <= 1) ? 'square' : 'squares'))
+    return game.i18n.localize('l5r-dragruler.ranges.weapon.' + returnedText) + ' [' + regexResult[0] + square + ']'
 }
