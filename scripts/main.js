@@ -6,24 +6,27 @@ Hooks.on("init", () => {
 //Neaten out the areas of movement
 //Make Terrain Matter?
 //Diagonal/Resolving Movement etc
+let dragRulerZeroBasedMovement = false;
+let dragRulerTacticalBasedMovement = false;
 Hooks.on("ready", () => {
 
     libWrapper.register("l5r-dragruler", "Ruler.prototype.measure", function (wrapped, ...args) {
         let wrappedResult = wrapped(...args);
         let dragRulerSupportActive = game.settings.get("l5r-dragruler", "dragRulerSupport");
-        let dragRulerZeroBasedMovement = game.settings.get("l5r-dragruler", "setZeroBased");
+        dragRulerZeroBasedMovement = game.settings.get("l5r-dragruler", "setZeroBased");
+        dragRulerTacticalBasedMovement = game.settings.get("l5r-dragruler","setTacticalBased");
         if (wrappedResult.label) {
             let segment = wrappedResult;
             //Loop over all prior segments of the ruler
             do {
-                segment.label.text = changeLabelNames(segment.label.text, dragRulerZeroBasedMovement);// + "/n" + getAllPreviousRayWidths();
+                segment.label.text = changeLabelNames(segment.label.text);// + "/n" + getAllPreviousRayWidths();
                 // Go to prior segment and convert label -> For the case that the ruler has waypoints
                 segment = segment.prior_segment;
             } while (segment !== undefined && Object.keys(segment).length > 0);
 
         } else if (dragRulerSupportActive && Array.isArray(wrappedResult) && wrappedResult.length > 0) { //Handling for Dragruler Support
             for (let i = 0; i < wrappedResult.length; i++) {
-                wrappedResult[i].label.text = changeLabelNames(wrappedResult[i].label.text, dragRulerZeroBasedMovement);
+                wrappedResult[i].label.text = changeLabelNames(wrappedResult[i].label.text);
             }
         }
         return wrappedResult;
@@ -61,22 +64,28 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             ]
         }
         getRanges() {
+            var actualRange = GetRangeDefault();
             const baseSpeed = 1;
             const ranges = [
-                { range: baseSpeed *1, color: "touchRange"}, //5
-                { range: baseSpeed *2, color: "swordRange"}, //10
-                { range: baseSpeed *3, color: "spearRange"}, //15
-                { range: baseSpeed *6, color: "throwRange"}, //30
-                { range: baseSpeed *10, color: "bowRange"}, //50
-                { range: baseSpeed *15, color: "volleyRange"}, //75
-                { range: baseSpeed *20, color: "sightRange"} //100
+                { range: baseSpeed *actualRange[0], color: "touchRange"}, //5
+                { range: baseSpeed *actualRange[1], color: "swordRange"}, //10
+                { range: baseSpeed *actualRange[2], color: "spearRange"}, //15
+                { range: baseSpeed *actualRange[3], color: "throwRange"}, //30
+                { range: baseSpeed *actualRange[4], color: "bowRange"}, //50
+                { range: baseSpeed *actualRange[5], color: "volleyRange"}, //75
+                { range: baseSpeed *actualRange[6], color: "sightRange"} //100
             ]
             return ranges;
         }
     }
     dragRuler.registerModule("l5r-dragruler", LegendOfTheFiveRingsSpeedProvider)
 })
-
+function GetRangeDefault(){
+    var setZero = (dragRulerZeroBasedMovement)? 1 : 0;
+    var defaultRange = new Array(1-setZero,2-setZero,3-setZero,6-setZero,10-setZero,15-setZero,20-setZero,21-setZero);
+    var tacticalRange = new Array(0,2,4,10,100,101,102);
+    return (dragRulerTacticalBasedMovement)? tacticalRange : defaultRange;
+}
 function registerSettings() {
     game.settings.register("l5r-dragruler", "dragRulerSupport", {
         name: "l5r-dragruler.settings.dragRulerSupport.name",
@@ -92,34 +101,41 @@ function registerSettings() {
 		type: Boolean,
 		default: false,
     })
+    game.settings.register("l5r-dragruler","setTacticalBased", {
+        name: "Tactical setting.",
+        hint: "Sets range band to convert to yards instead of range bands.",
+        scope: "client",
+        config: true,
+		type: Boolean,
+		default: false,
+    })
 }
 function getAllPreviousRayWidths() {
 
 }
-function changeLabelNames(text, zerobased) {
+function changeLabelNames(text) {
     let returnedText = "";
     let regexResult = text.split(' ');
-    let zeroRange = (zerobased)? 1 : 0;
+    var actualRange = GetRangeDefault();
     if (regexResult && regexResult[0]) {
         var parsedFloat = parseFloat(regexResult[0]);
-        if (parsedFloat <= (1 - zeroRange)) {
+        if (parsedFloat <= (actualRange[0])) {
             returnedText = "Touch";
-        } else if (parsedFloat <= (2 - zeroRange)) {
+        } else if (parsedFloat <= (actualRange[1])) {
             returnedText = "Sword";
-        } else if (parsedFloat <= (3 - zeroRange)) {
+        } else if (parsedFloat <= (actualRange[2])) {
             returnedText = "Spear";
-        } else if (parsedFloat <= (6 - zeroRange)) {
+        } else if (parsedFloat <= (actualRange[3])) {
             returnedText = "Throwing";
-        } else if (parsedFloat <= (10 - zeroRange)) {
+        } else if (parsedFloat <= (actualRange[4])) {
             returnedText = "Bow";
-        } else if (parsedFloat <= (15 - zeroRange)) {
+        } else if (parsedFloat <= (actualRange[5])) {
             returnedText = "Volley";
-        } else if (parsedFloat <= (20 - zeroRange)) {
-            returnedText = "Sight";
         } else {
-            returnedText = "Out of";
+            returnedText = "Sight";
         }
     }
     var square = (regexResult[0]<=1)? " square" : " squares";
-    return returnedText + " Range" + " [" + regexResult[0] + square + "]";
+    var yard = (regexResult[0]<=1)? " yard" : " yards";
+    return returnedText + " Range" + " [" + regexResult[0] + ((dragRulerTacticalBasedMovement)? yard : square) + "]";
 }
