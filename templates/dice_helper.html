@@ -1,0 +1,22 @@
+<h4 style="text-align:center;margin:0px;">{{this.stance}}</h4>
+<div style="text-align:center;">
+    <img height="50" style="border:none;" src="{{this.image}}" title="{{this.stance}}" width="50"/>
+    <div><b>{{acting}}</b></div>
+    <div><i>{{description}}</i></div>
+</div>
+<div>
+    {{#if skill}}
+    <h2>{{skill}}:</h2>
+    {{else}}
+    <hr>
+    {{/if}}
+    {{#each suggestions}}
+    <div style="font-size:13px; padding-bottom: 5px;">
+        {{#if required}}
+            {{#times this.required}}(op){{/times}}{{#if extra}}+{{/if}}: 
+        {{/if}}
+        {{this.text}}
+    </div>
+    {{/each}}
+</div>
+
