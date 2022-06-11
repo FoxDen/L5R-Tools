@@ -348,7 +348,7 @@ function getAllPreviousRayWidths() {
 
 }
 function is_roll(message_data) {
-    if (game.user.isGM && message_data['_roll'] !== null) {
+    if (message_data['_roll'] !== null) {
         if (message_data['data']['roll'] === undefined) {
             return false;
         }
