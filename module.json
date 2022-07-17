@@ -21,7 +21,7 @@
       "type": "module"
     }
   ],
-  "version": "2",
+  "version": "2.2",
   "url": "https://github.com/FoxDen/L5R-Dragruler",
   "download": "https://github.com/FoxDen/L5R-Dragruler/archive/master.zip",
   "manifest": "https://raw.githubusercontent.com/FoxDen/L5R-Dragruler/master/module.json"
