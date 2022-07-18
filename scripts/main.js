@@ -9,7 +9,6 @@ Hooks.on("init", () => {
 //Add functionality for technique-specific opportunities, merge with Attack-specific opportunity
 let dragRulerZeroBasedMovement = false;
 let dragRulerTacticalBasedMovement = false;
-let userAlias = "";
 Hooks.on("ready", () => {
 
     libWrapper.register("l5r-dragruler", "Ruler.prototype.measure", function (wrapped, ...args) {
@@ -115,9 +114,9 @@ async function socket_listener(data){
 }
 
 async function dice_helper_clicked(object){
-    if(!game.user.isGM && object.alias != userAlias){
+    if(!game.user.isGM)
         game.socket.emit(
-            'l5r-dragruler',
+            'module.5r-dragruler',
             {
                 type: 'dice',
                 object:object
@@ -188,7 +187,7 @@ async function fetch_suggestions(results) {
 }
 
 export function dice_helper(){
-    game.socket.on("l5r-dragruler", socket_listener);
+    game.socket.on("module.l5r-dragruler", socket_listener);
     Hooks.on("createChatMessage", (messageData, meta_data, id) =>{
         if(game.settings.get("l5r-dragruler", "opportunity-helper")){
             if(is_roll(messageData) === true && messageData["_roll"]!= null 
@@ -221,7 +220,6 @@ export function dice_helper(){
             html.on("click", ".l5rSpend", async function () {
                 await dice_helper_clicked(messageData);
             });
-            userAlias = messageData.alias;
         }
     })
 }
