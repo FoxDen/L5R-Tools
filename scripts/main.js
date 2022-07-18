@@ -9,6 +9,7 @@ Hooks.on("init", () => {
 //Add functionality for technique-specific opportunities, merge with Attack-specific opportunity
 let dragRulerZeroBasedMovement = false;
 let dragRulerTacticalBasedMovement = false;
+let userAlias = "";
 Hooks.on("ready", () => {
 
     libWrapper.register("l5r-dragruler", "Ruler.prototype.measure", function (wrapped, ...args) {
@@ -114,7 +115,7 @@ async function socket_listener(data){
 }
 
 async function dice_helper_clicked(object){
-    if(!game.user.isGM){
+    if(!game.user.isGM && object.alias != userAlias){
         game.socket.emit(
             'l5r-dragruler',
             {
@@ -191,7 +192,7 @@ export function dice_helper(){
     Hooks.on("createChatMessage", (messageData, meta_data, id) =>{
         if(game.settings.get("l5r-dragruler", "opportunity-helper")){
             if(is_roll(messageData) === true && messageData["_roll"]!= null 
-                && messageData["_roll"]["l5r5e"]["history"]!=null // Reveal on second roll
+                && messageData["_roll"]["l5r5e"]["rnkEnded"]==true // Reveal on second roll
                 && messageData["roll"]["l5r5e"]["summary"].opportunity > 0){ 
                 let skillGroup = messageData["roll"]["l5r5e"].skillCatId;
                 let skill = messageData["roll"]["l5r5e"].skillId;
@@ -220,6 +221,7 @@ export function dice_helper(){
             html.on("click", ".l5rSpend", async function () {
                 await dice_helper_clicked(messageData);
             });
+            userAlias = messageData.alias;
         }
     })
 }
@@ -348,7 +350,7 @@ function getAllPreviousRayWidths() {
 
 }
 function is_roll(message_data) {
-    if (message_data['_roll'] !== null) {
+    if (game.user.isGM && message_data['_roll'] !== null) {
         if (message_data['data']['roll'] === undefined) {
             return false;
         }
