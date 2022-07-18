@@ -116,7 +116,7 @@ async function socket_listener(data){
 async function dice_helper_clicked(object){
     if(!game.user.isGM){
         game.socket.emit(
-            'module.5r-dragruler',
+            'module.l5r-dragruler',
             {
                 type: 'dice',
                 object:object
