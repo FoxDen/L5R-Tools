@@ -1,0 +1,58 @@
+{
+  "l5r-dragruler": {
+    "settings": {
+      "dragRulerSupport": {
+        "name": "",
+        "hint": ""
+      },
+      "setZeroBased": {
+        "name": "Set zero based range band.",
+        "hint": "Sets range band to begin at position 0."
+      }
+    },
+    "square": "Square",
+    "squares": "Squares",
+    "environments": {
+      "dangerous": "Dangerous",
+      "defiled": "Defiled",
+      "entangling": "Entangling",
+      "hallowed": "Hallowed",
+      "obscuring": "Obscuring",
+      "confining": "Confining",
+      "elevated": "Elevated",
+      "open": "Open",
+      "recessed": "Recessed"
+    },
+    "ranges": {
+      "speed": {
+        "1": "1 Rangeband",
+        "2": "2 Rangebands",
+        "3": "3 Rangebands",
+        "4": "4 Rangebands",
+        "5": "5 Rangebands",
+        "6": "6 Rangebands",
+        "7": "7+ Rangebands"
+      },
+
+      "weapon_desc": {
+        "touchRange": "Touch range (1-2 feet)",
+        "swordRange": "Sword range (1-2 yards)",
+        "spearRange": "Spear range (3-4 yards)",
+        "throwRange": "Throwing weapon range (5-10 yards)",
+        "bowRange": "Bow range (11-100 yards)",
+        "volleyRange": "Volley range (100+ yards)",
+        "sightRange": "Vision range"
+      },
+      "weapon": {
+        "touch": "Touch range",
+        "sword": "Sword range",
+        "spear": "Spear range",
+        "throwing": "Throwing weapon range",
+        "bow": "Bow range",
+        "volley": "Volley range",
+        "sight": "Vision range",
+        "out_of": "Out of range"
+      }
+    }
+  }
+}
