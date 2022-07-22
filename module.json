@@ -1,7 +1,7 @@
 {
   "name": "l5r-dragruler",
-  "title": "L5R Drag Ruler Conversion",
-  "description": "A Drag Ruler [] Conversion for the L5R Ruleset",
+  "title": "L5R Tools",
+  "description": "A very small set of tools to help the Legend of the 5 Rings system.",
   "author": "Lisa Ngo",
   "minimumCoreVersion": "0.8.8",
   "compatibleCoreVersion" : "9",
@@ -24,10 +24,11 @@
       "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
     },
     {
-      "name": "lib-wrapper"
+      "name": "lib-wrapper",
+      "type": "module"
     }
   ],
-  "version": "1.2",
+  "version": "2.4.2",
   "url": "https://github.com/FoxDen/L5R-Dragruler",
   "download": "https://github.com/FoxDen/L5R-Dragruler/archive/master.zip",
   "manifest": "https://raw.githubusercontent.com/FoxDen/L5R-Dragruler/master/module.json"
