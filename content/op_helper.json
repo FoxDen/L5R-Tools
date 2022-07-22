@@ -7,7 +7,7 @@
                 "extra": false
             },
             {
-                "text": "Act Extremely carefully. Additional (op) spent makes the attempt even safer.",
+                "text": "Act extremely carefully. Additional (op) spent makes the attempt even safer.",
                 "required": 1,
                 "extra": true
             },
@@ -21,7 +21,7 @@
             "artisan": { "text": "If successful, add the Durable quality to an item you're restoring.", "required": 1},
             "scholar": { "text": "Remember a place where you can research the topic you were attempting to recall.", "required": 1},
             "social": { "text": "Increase the TN of another character's next Social check made before the end of the scene by 1.", "required": 1},
-            "trade": { "text": "Reduce the TN of nother character's next check made with the same skill before the end of this scene by 1.", "required": 1},
+            "trade": { "text": "Reduce the TN of another character's next check made with the same skill before the end of this scene by 1.", "required": 1},
             "initiative": { "text": "Choose another character's disadvantage you know. They do not apply it this scene.", "required": 1}
         },
         "conflict":[
@@ -39,7 +39,19 @@
                 "text": "Do not apply one of your disadvantages to checks until the end of your next turn.",
                 "required": 2,
                 "extra": false
-            }
+            },
+        ],
+        "downtime":[
+            {
+                "text": "Another character in your company can take off either 1 fatigue or 1 (st) per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Memorize a small and vital detail that can be freely recalled.",
+                "required": 2,
+                "extra": false
+            },
         ],
         "desc":[
             {
@@ -90,12 +102,23 @@
                 "extra": false
             }
         ],
+        "downtime":[
+            {
+                "text": "Remove 1 (st) or 1 fatigue per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "During your activity you make a new friend.",
+                "required": 2,
+                "extra": false
+            },
+        ],
         "desc":[            
         {
             "acting":"Act efficiently, flexibly or gregariously.", 
             "descriptor": "Environmental design, presence of useful terrain or objects, escape routes."
-        }
-            
+        }       
         ]
     },
     "Fire":{
@@ -139,6 +162,18 @@
                 "required": 2,
                 "extra": false
             }
+        ],
+        "downtime":[
+            {
+                "text": "Assist another character with their next downtime check per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Another character may perform another downtime activity, up to a maximum of 2.",
+                "required": 2,
+                "extra": false
+            },
         ],
         "desc":[
             {
@@ -189,6 +224,18 @@
                 "extra": false
             }
         ],
+        "downtime":[
+            {
+                "text": "Learn a detail, such as an advantage or a disadvantage of their choice, from a character in your company, per (op) spent. Max 1 detail per person.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Perform your downtime activities in secret, without letting others know.",
+                "required": 2,
+                "extra": false
+            },
+        ],
         "desc":[
             {
                 "acting":"Acting smoothly, precisely, stealthily or subtly.", 
@@ -237,6 +284,18 @@
                 "required": 2,
                 "extra": false
             }
+        ],
+        "downtime":[
+            {
+                "text": "Reserve one dropped die per (op) spent, up to the character's level in the skill, which can be added as a kept die in your next check with this skill.", 
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Have a premonition of a future event.",
+                "required": 2,
+                "extra": false
+            },
         ],
         "desc":[
             {
