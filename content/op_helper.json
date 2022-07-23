@@ -53,6 +53,54 @@
                 "extra": false
             },
         ],
+        "negotiation": [
+            {
+                "text": "Pick a character that will not be able to gain momentum points till the end of your next turn.",
+                "required": 3,
+                "extra": false
+            },
+        ],
+        "romance": [
+            {
+                "text": "You share some peculiar interest your target. They have to choose among three suggestions you pick, and both you and them may remove 2 strife.",
+                "required": 2,
+                "extra": false
+            },
+        ],
+        "espionage": [
+            {
+                "text": "You hide in an excellent place that reduces the TN of checks to avoid notice by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+        ],
+        "invocations":[
+            {
+                "text": "Increases your physical resistance by 1 until the start of your next turn.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Pick additional targets per (op) spent if the invocation targets people other than you.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "The range of this invocation is longer by one unit per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "This effect inflicts physical damage and not supernatural.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "The damage inflicted has the Sacred quality.",
+                "required": 1,
+                "extra": false
+            }
+        ],
         "desc":[
             {
                 "acting":"Act cautiously, calmly or throughly.", 
@@ -113,6 +161,54 @@
                 "required": 2,
                 "extra": false
             },
+        ],
+        "negotiation": [
+            {
+                "text": "Ask a question unrelated to your current situation and objecive. If it's answered honestly, they gain 1 momentum point and can ask you a question. If they do, you gain one momentum point.",
+                "required": 2,
+                "extra": false
+            },
+        ],
+        "romance": [
+            {
+                "text": "Your target offers a private meeting in the next few days to spend some time alone.",
+                "required": 2,
+                "extra": false
+            },
+        ],
+        "espionage": [
+            {
+                "text": "You gain a new location viable for investigate the current subject.",
+                "required": 1,
+                "extra": false
+            },
+        ],
+        "invocations":[
+            {
+                "text": "Increases your supernatural resistance by 1 until the start of your next turn.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Pick additional targets per (op) spent if the invocation targets people other than you.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "The range of this invocation is longer by one unit per (op) (op) spent.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "Remove 1 fatigue from target or yourself.",
+                "required": 2,
+                "extra": false
+            },
+            {
+                "text": "Reduce the TN of the next support action you do by 1 until the end of your next turn.",
+                "required": 1,
+                "extra": false
+            }
         ],
         "desc":[            
         {
@@ -175,6 +271,54 @@
                 "extra": false
             },
         ],
+        "negotiation": [
+            {
+                "text": "Pick something someone has said; they must tell you the hidden motivations behind that statement.",
+                "required": 2,
+                "extra": false
+            },
+        ],
+        "romance": [
+            {
+                "text": "Your target has to tell you what they find attractive about you, you both take one (st) and have the next Social TN lowered by one.",
+                "required": 2,
+                "extra": false
+            },
+        ],
+        "espionage": [
+            {
+                "text": "For some reason, you catch the attention of someone that seems to be sympathetic to you and is willing to help somehow.",
+                "required": 3,
+                "extra": false
+            },
+        ],
+        "invocations":[
+            {
+                "text": "Increases the TN of the checks made to resist the effects of the invocation by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Pick additional targets per (op) spent if the invocation targets people other than you.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "The range of this invocation is longer by one unit per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "One target per (op) (op) spent must do a TN 3 Fitness check (Air 4, Water 1) or suffer the Burning condition.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "Reduce the TN of the next Attack action you do by 1 until the end of your next turn.",
+                "required": 1,
+                "extra": false
+            }
+        ],
         "desc":[
             {
                 "acting":"Acting creatively, fearsomely or noticeably.",
@@ -236,6 +380,54 @@
                 "extra": false
             },
         ],
+        "negotiation": [
+            {
+                "text": "A character must either offer a minor concession towards you or offer you a boon, or lose one momentum point per (op) (op) spent.",
+                "required": 2,
+                "extra": true
+            },
+        ],
+        "romance": [
+            {
+                "text": "The target reveals an advantage or disadvantage of a mutual acquaitance.",
+                "required": 2,
+                "extra": false
+            },
+        ],
+        "espionage": [
+            {
+                "text": "A number of Minion NPCs equal to the (op) spent this way or a single Adversary NPC with Vigilance lower than the (op) spent lose sight of you without noticing your absence, unless actively searching.",
+                "required": 1,
+                "extra": true
+            },
+        ],
+        "invocations":[
+            {
+                "text": "Pick additional targets per (op) (op) spent if the invocation targets people other than you.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "Pick additional targets per (op) (op) spent.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "The range of this invocation is longer by one unit per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "If the invocation targets all characters in an area, pick an exception per (op) (op) spent.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "Reduce the TN of the next Movement action you do by 1 until the end of your next turn.",
+                "required": 1,
+                "extra": false
+            }
+        ],
         "desc":[
             {
                 "acting":"Acting smoothly, precisely, stealthily or subtly.", 
@@ -295,6 +487,27 @@
                 "text": "Have a premonition of a future event.",
                 "required": 2,
                 "extra": false
+            },
+        ],
+        "negotiation": [
+            {
+                "text": "Any momentum point gained by one character is instead added to your score.",
+                "required": 3,
+                "extra": false
+            },
+        ],
+        "romance": [
+            {
+                "text": "The target decides some kind of casual contact that happens among you two. They also decide their reaction, but you won't be blamed for anything untoward.",
+                "required": 3,
+                "extra": false
+            },
+        ],
+        "espionage": [
+            {
+                "text": "You discover that another spy has already investigated here, and what trace they left behind.",
+                "required": 1,
+                "extra": true
             },
         ],
         "desc":[
