@@ -380,6 +380,7 @@ function changeLabelNames(text, zerobased) {
 
     const square = ' ' + game.i18n.localize('l5r-dragruler.' + ((regexResult[0] <= 1) ? 'square' : 'squares'))
     return game.i18n.localize('l5r-dragruler.ranges.weapon.' + returnedText) + ' [' + regexResult[0] + square + ']'
+}
 
 function is_roll(message_data) {
     if (game.user.isGM && message_data['_roll'] !== null) {
