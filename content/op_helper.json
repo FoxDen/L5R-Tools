@@ -1,6 +1,6 @@
 {
-    "Earth":{
-        "base":[
+    "Earth": {
+        "base": [
             {
                 "text": "Reduce another character's (st) by 2.",
                 "required": 1,
@@ -17,14 +17,29 @@
                 "extra": false
             }
         ],
-        "skills":{
-            "artisan": { "text": "If successful, add the Durable quality to an item you're restoring.", "required": 1},
-            "scholar": { "text": "Remember a place where you can research the topic you were attempting to recall.", "required": 1},
-            "social": { "text": "Increase the TN of another character's next Social check made before the end of the scene by 1.", "required": 1},
-            "trade": { "text": "Reduce the TN of another character's next check made with the same skill before the end of this scene by 1.", "required": 1},
-            "initiative": { "text": "Choose another character's disadvantage you know. They do not apply it this scene.", "required": 1}
+        "skills": {
+            "artisan": {
+                "text": "If successful, add the Durable quality to an item you're restoring.",
+                "required": 1
+            },
+            "scholar": {
+                "text": "Remember a place where you can research the topic you were attempting to recall.",
+                "required": 1
+            },
+            "social": {
+                "text": "Increase the TN of another character's next Social check made before the end of the scene by 1.",
+                "required": 1
+            },
+            "trade": {
+                "text": "Reduce the TN of another character's next check made with the same skill before the end of this scene by 1.",
+                "required": 1
+            },
+            "initiative": {
+                "text": "Choose another character's disadvantage you know. They do not apply it this scene.",
+                "required": 1
+            }
         },
-        "conflict":[
+        "conflict": [
             {
                 "text": "During a Movement check, ignore one terrain quality of your choice.",
                 "required": 1,
@@ -39,9 +54,9 @@
                 "text": "Do not apply one of your disadvantages to checks until the end of your next turn.",
                 "required": 2,
                 "extra": false
-            },
+            }
         ],
-        "downtime":[
+        "downtime": [
             {
                 "text": "Another character in your company can take off either 1 fatigue or 1 (st) per (op) spent.",
                 "required": 1,
@@ -51,17 +66,110 @@
                 "text": "Memorize a small and vital detail that can be freely recalled.",
                 "required": 2,
                 "extra": false
-            },
+            }
         ],
-        "desc":[
+        "negotiation": [
             {
-                "acting":"Act cautiously, calmly or throughly.", 
+                "text": "Pick a character that will not be able to gain momentum points till the end of your next turn.",
+                "required": 3,
+                "extra": false
+            }
+        ],
+        "romance": [
+            {
+                "text": "You share some peculiar interest your target. They have to choose among three suggestions you pick, and both you and them may remove 2 strife.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "espionage": [
+            {
+                "text": "You hide in an excellent place that reduces the TN of checks to avoid notice by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "invocations": [
+            {
+                "text": "Increases your physical resistance by 1 until the start of your next turn.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Pick additional targets per (op) spent if the invocation targets people other than you.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "The range of this invocation is longer by one unit per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "This effect inflicts physical damage and not supernatural.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "The damage inflicted has the Sacred quality.",
+                "required": 1,
+                "extra": false
+            }
+        ],
+        "tainted": [
+            {
+                "text": "Reduce the fatigue taken by 2 for the rest of the scene",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "againsttainted": [
+            {
+                "text": "The next time you gain (st) it's reduced by 2.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "shadowlands": [
+            {
+                "text": "The next time you have to notice or avoid a hazard your Vigilance is raised by 1.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "massbattle": [
+            {
+                "text": "Remove 1 panic from your army per (op) spent",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Choose an allied leader. That leader's cohort cannot be targeted by Attacks until the end of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "Reduce the TN of your next check for making a deal with something strange or unfamiliar by 1.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Remove 1 strife for each Condition you are suffering from.",
+                "required": 1,
+                "extra": false
+            }
+        ],
+        "desc": [
+            {
+                "acting": "Act cautiously, calmly or throughly.",
                 "descriptor": "Your own memories, the history of people and objects, defensive positions."
             }
         ]
     },
-    "Water":{
-        "base":[
+    "Water": {
+        "base": [
             {
                 "text": "Recover 2 (st).",
                 "required": 1,
@@ -78,14 +186,29 @@
                 "extra": false
             }
         ],
-        "skills":{
-            "artisan": { "text": "Add a kept (ring) set to an (op) result the next Artisan check made this session.", "required": 1},
-            "scholar": { "text": "Spot a unique or identifying quality, aspect or ability of something you're identifying.", "required": 1},
-            "social": { "text": "Add a kept (ring) to an (op) result of your next Social check before the end of the scene.", "required": 1},
-            "trade": { "text": "Get a 10% discount purchasing an item.", "required": 1},
-            "initiative": { "text": "Assess all terrain qualities in the scene.", "required": 1}
+        "skills": {
+            "artisan": {
+                "text": "Add a kept (ring) set to an (op) result the next Artisan check made this session.",
+                "required": 1
+            },
+            "scholar": {
+                "text": "Spot a unique or identifying quality, aspect or ability of something you're identifying.",
+                "required": 1
+            },
+            "social": {
+                "text": "Add a kept (ring) to an (op) result of your next Social check before the end of the scene.",
+                "required": 1
+            },
+            "trade": {
+                "text": "Get a 10% discount purchasing an item.",
+                "required": 1
+            },
+            "initiative": {
+                "text": "Assess all terrain qualities in the scene.",
+                "required": 1
+            }
         },
-        "conflict":[
+        "conflict": [
             {
                 "text": "Remove 1 fatigue.",
                 "required": 1,
@@ -102,7 +225,7 @@
                 "extra": false
             }
         ],
-        "downtime":[
+        "downtime": [
             {
                 "text": "Remove 1 (st) or 1 fatigue per (op) spent.",
                 "required": 1,
@@ -112,17 +235,110 @@
                 "text": "During your activity you make a new friend.",
                 "required": 2,
                 "extra": false
-            },
+            }
         ],
-        "desc":[            
-        {
-            "acting":"Act efficiently, flexibly or gregariously.", 
-            "descriptor": "Environmental design, presence of useful terrain or objects, escape routes."
-        }       
+        "negotiation": [
+            {
+                "text": "Ask a question unrelated to your current situation and objecive. If it's answered honestly, they gain 1 momentum point and can ask you a question. If they do, you gain one momentum point.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "romance": [
+            {
+                "text": "Your target offers a private meeting in the next few days to spend some time alone.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "espionage": [
+            {
+                "text": "You gain a new location viable for investigate the current subject.",
+                "required": 1,
+                "extra": false
+            }
+        ],
+        "invocations": [
+            {
+                "text": "Increases your supernatural resistance by 1 until the start of your next turn.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Pick additional targets per (op) spent if the invocation targets people other than you.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "The range of this invocation is longer by one unit per (op) (op) spent.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "Remove 1 fatigue from target or yourself.",
+                "required": 2,
+                "extra": false
+            },
+            {
+                "text": "Reduce the TN of the next support action you do by 1 until the end of your next turn.",
+                "required": 1,
+                "extra": false
+            }
+        ],
+        "tainted": [
+            {
+                "text": "You can remove one of the following conditions: Dazed, Disoriented, Immobilized, Intoxicated, Lightly Wounded, Prone",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "againsttainted": [
+            {
+                "text": "Before the end of the session you reduce by 1 the TN needed to resist a Tainted technique or increase the TN to afflict you with one by 1.",
+                "required": 1,
+                "extra": false
+            }
+        ],
+        "shadowlands": [
+            {
+                "text": "You find an untainted item with max base rarity of 3, raised by one every 2 extra (op) spent.",
+                "required": 2,
+                "extra": true
+            }
+        ],
+        "massbattle": [
+            {
+                "text": "Choose an allied leader. Reduce their next TN for a Movement check by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Choose an enemy leader. That leader's cohort cannot perform Movement actions until the beginning of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "For each (op)(op) spent, an hostile character becomes friendlier towards you.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "You learn one key feature, fortification, or terrain quality of the area, and wether enemis have passed through recently.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "desc": [
+            {
+                "acting": "Act efficiently, flexibly or gregariously.",
+                "descriptor": "Environmental design, presence of useful terrain or objects, escape routes."
+            }
         ]
     },
-    "Fire":{
-        "base":[
+    "Fire": {
+        "base": [
             {
                 "text": "Inflict 2 (st) on another character.",
                 "required": 1,
@@ -139,14 +355,29 @@
                 "extra": false
             }
         ],
-        "skills":{
-            "artisan": { "text": "If you succeed, make an extra copy of the item you are creating.", "required": 1},
-            "scholar": { "text": "Disern a character's motivations or desires.", "required": 1},
-            "social": { "text": "Reduce the TN of another character's next Social check by 1.", "required": 1},
-            "trade": { "text": "Add a kept (ring) set to an (op) result to the next check you make with another skill.", "required": 1},
-            "initiative": { "text": "Use your focus instead of your initiative when surprised.", "required": 1}
+        "skills": {
+            "artisan": {
+                "text": "If you succeed, make an extra copy of the item you are creating.",
+                "required": 1
+            },
+            "scholar": {
+                "text": "Disern a character's motivations or desires.",
+                "required": 1
+            },
+            "social": {
+                "text": "Reduce the TN of another character's next Social check by 1.",
+                "required": 1
+            },
+            "trade": {
+                "text": "Add a kept (ring) set to an (op) result to the next check you make with another skill.",
+                "required": 1
+            },
+            "initiative": {
+                "text": "Use your focus instead of your initiative when surprised.",
+                "required": 1
+            }
         },
-        "conflict":[
+        "conflict": [
             {
                 "text": "Increase the TN of another character's next check by 1 if it does not target you.",
                 "required": 1,
@@ -163,7 +394,7 @@
                 "extra": false
             }
         ],
-        "downtime":[
+        "downtime": [
             {
                 "text": "Assist another character with their next downtime check per (op) spent.",
                 "required": 1,
@@ -173,17 +404,110 @@
                 "text": "Another character may perform another downtime activity, up to a maximum of 2.",
                 "required": 2,
                 "extra": false
-            },
+            }
         ],
-        "desc":[
+        "negotiation": [
             {
-                "acting":"Acting creatively, fearsomely or noticeably.",
+                "text": "Pick something someone has said; they must tell you the hidden motivations behind that statement.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "romance": [
+            {
+                "text": "Your target has to tell you what they find attractive about you, you both take one (st) and have the next Social TN lowered by one.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "espionage": [
+            {
+                "text": "For some reason, you catch the attention of someone that seems to be sympathetic to you and is willing to help somehow.",
+                "required": 3,
+                "extra": false
+            }
+        ],
+        "invocations": [
+            {
+                "text": "Increases the TN of the checks made to resist the effects of the invocation by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Pick additional targets per (op) spent if the invocation targets people other than you.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "The range of this invocation is longer by one unit per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "One target per (op) (op) spent must do a TN 3 Fitness check (Air 4, Water 1) or suffer the Burning condition.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "Reduce the TN of the next Attack action you do by 1 until the end of your next turn.",
+                "required": 1,
+                "extra": false
+            }
+        ],
+        "tainted": [
+            {
+                "text": "Add 1 kept (ring) on (st) to the next Martial Arts roll you make until the end of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "againsttainted": [
+            {
+                "text": "Each Tainted character takes 1 (st) per (op) spent.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "shadowlands": [
+            {
+                "text": "Next time someone else in the scene has to resist physical hardship or the influence of the Shadowlands the TN is lowered by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "massbattle": [
+            {
+                "text": "The enemy suffers from 1 panic per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "When attacking a cohort of a leader with Vigilance lower than the (op) spent, after resolving its effects inflict a critical stike with severity equal to one of your weapons.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "Immediately attempt a Scholar skill check to learn about your situation or a NPC present, lowering the TN by 1.",
+                "required": 2,
+                "extra": false
+            },
+            {
+                "text": "Any number of characters may remove 1 strife per (op) spent, but you gain 1 strife per person.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "desc": [
+            {
+                "acting": "Acting creatively, fearsomely or noticeably.",
                 "descriptor": "People's motivations, flashes of insight, conspicuous absences."
             }
         ]
     },
-    "Air":{
-        "base":[
+    "Air": {
+        "base": [
             {
                 "text": "Learn a character's demeanor and current (st).",
                 "required": 1,
@@ -200,14 +524,29 @@
                 "extra": false
             }
         ],
-        "skills":{
-            "artisan": { "text": "If successful, add the Resplendent or Subtle quality to an item you're refining.", "required": 1},
-            "scholar": { "text": "Learn something about the person who created/used the item you're studying.", "required": 1},
-            "social": { "text": "Learn of the Honor/Glory/Status of a character is higher, lower or equal to yours.", "required": 1},
-            "trade": { "text": "Sell an item for 10% more.", "required": 1},
-            "initiative": { "text": "Discover a foe's Disadvantage (their choice).", "required": 1}
+        "skills": {
+            "artisan": {
+                "text": "If successful, add the Resplendent or Subtle quality to an item you're refining.",
+                "required": 1
+            },
+            "scholar": {
+                "text": "Learn something about the person who created/used the item you're studying.",
+                "required": 1
+            },
+            "social": {
+                "text": "Learn of the Honor/Glory/Status of a character is higher, lower or equal to yours.",
+                "required": 1
+            },
+            "trade": {
+                "text": "Sell an item for 10% more.",
+                "required": 1
+            },
+            "initiative": {
+                "text": "Discover a foe's Disadvantage (their choice).",
+                "required": 1
+            }
         },
-        "conflict":[
+        "conflict": [
             {
                 "text": "Add a kept (ring) set to a (op) result for your next Martial check.",
                 "required": 1,
@@ -224,7 +563,7 @@
                 "extra": false
             }
         ],
-        "downtime":[
+        "downtime": [
             {
                 "text": "Learn a detail, such as an advantage or a disadvantage of their choice, from a character in your company, per (op) spent. Max 1 detail per person.",
                 "required": 1,
@@ -234,17 +573,110 @@
                 "text": "Perform your downtime activities in secret, without letting others know.",
                 "required": 2,
                 "extra": false
-            },
+            }
         ],
-        "desc":[
+        "negotiation": [
             {
-                "acting":"Acting smoothly, precisely, stealthily or subtly.", 
+                "text": "A character must either offer a minor concession towards you or offer you a boon, or lose one momentum point per (op) (op) spent.",
+                "required": 2,
+                "extra": true
+            }
+        ],
+        "romance": [
+            {
+                "text": "The target reveals an advantage or disadvantage of a mutual acquaitance.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "espionage": [
+            {
+                "text": "A number of Minion NPCs equal to the (op) spent this way or a single Adversary NPC with Vigilance lower than the (op) spent lose sight of you without noticing your absence, unless actively searching.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "invocations": [
+            {
+                "text": "Pick additional targets per (op) (op) spent if the invocation targets people other than you.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "Pick additional targets per (op) (op) spent.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "The range of this invocation is longer by one unit per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "If the invocation targets all characters in an area, pick an exception per (op) (op) spent.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "Reduce the TN of the next Movement action you do by 1 until the end of your next turn.",
+                "required": 1,
+                "extra": false
+            }
+        ],
+        "tainted": [
+            {
+                "text": "The TN of the next check made to scrutinize you is raised by 1.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "againsttainted": [
+            {
+                "text": "Your next check to oppose or harm a Tainted being has the TN lowred by 1.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "shadowlands": [
+            {
+                "text": "You notice a landmark that is less tainted and will guide you for a number of scenes equal to (op) spent.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "massbattle": [
+            {
+                "text": "Choose an allied leader. Reduce their next TN for a Scheme action by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Choose a leader in a fortification. That leader's cohort loses the benefits of the fortification till the beginning of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "You add a kept die showing (op) to your next Initiative check.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "You create a disguise. Next time you enter in a conflict, after Initiative, you pick one character who has to reroll all dice containing (su) results in their next check.",
+                "required": 2,
+                "extra": true
+            }
+        ],
+        "desc": [
+            {
+                "acting": "Acting smoothly, precisely, stealthily or subtly.",
                 "descriptor": "People's strengths and weaknesses, emotions and small details."
             }
         ]
     },
-    "Void":{
-        "base":[
+    "Void": {
+        "base": [
             {
                 "text": "Name another ring. If your next check uses that ring, reduce its TN by 1.",
                 "required": 1,
@@ -261,14 +693,29 @@
                 "extra": false
             }
         ],
-        "skills":{
-            "artisan": { "text": "Reduce the TN of your next check to use the item you are attuning to by 1.", "required": 1},
-            "scholar": { "text": "Realize whether or not the angle of inquiry under investigation is worthwhile.", "required": 1},
-            "social": { "text": "Learn another character's objective.", "required": 1},
-            "trade": { "text": "Reduce your effect on the environment (and physical traces of your efforts) to a minimum.", "required": 1},
-            "initiative": { "text": "Sense if there is an otherworldly being present in the scene.", "required": 1}
+        "skills": {
+            "artisan": {
+                "text": "Reduce the TN of your next check to use the item you are attuning to by 1.",
+                "required": 1
+            },
+            "scholar": {
+                "text": "Realize whether or not the angle of inquiry under investigation is worthwhile.",
+                "required": 1
+            },
+            "social": {
+                "text": "Learn another character's objective.",
+                "required": 1
+            },
+            "trade": {
+                "text": "Reduce your effect on the environment (and physical traces of your efforts) to a minimum.",
+                "required": 1
+            },
+            "initiative": {
+                "text": "Sense if there is an otherworldly being present in the scene.",
+                "required": 1
+            }
         },
-        "conflict":[
+        "conflict": [
             {
                 "text": "During your next Attack action, ignore one terrain quality of your choice.",
                 "required": 1,
@@ -285,9 +732,9 @@
                 "extra": false
             }
         ],
-        "downtime":[
+        "downtime": [
             {
-                "text": "Reserve one dropped die per (op) spent, up to the character's level in the skill, which can be added as a kept die in your next check with this skill.", 
+                "text": "Reserve one dropped die per (op) spent, up to the character's level in the skill, which can be added as a kept die in your next check with this skill.",
                 "required": 1,
                 "extra": true
             },
@@ -295,11 +742,82 @@
                 "text": "Have a premonition of a future event.",
                 "required": 2,
                 "extra": false
-            },
+            }
         ],
-        "desc":[
+        "negotiation": [
             {
-                "acting":"Act instinctually, inscrutably, or sagely.", 
+                "text": "Any momentum point gained by one character is instead added to your score.",
+                "required": 3,
+                "extra": false
+            }
+        ],
+        "romance": [
+            {
+                "text": "The target decides some kind of casual contact that happens among you two. They also decide their reaction, but you won't be blamed for anything untoward.",
+                "required": 3,
+                "extra": false
+            }
+        ],
+        "espionage": [
+            {
+                "text": "You discover that another spy has already investigated here, and what trace they left behind.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "tainted": [
+            {
+                "text": "You gain one piece of information per (op) spent, gaining one (st) per (op) spent.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "againsttainted": [
+            {
+                "text": "Spending 2 (op), you discern that the kami has fled, as well as the type of disturbance. SPending 3 (op), you also determine the combat (bushi) threat level of all the Tainted beings that have made the kami flee.",
+                "required": 2,
+                "extra": true
+            }
+        ],
+        "shadowlands": [
+            {
+                "text": "You ignore all (st) on the next check by drawing on memories of untainted lands.",
+                "required": 3,
+                "extra": false
+            }
+        ],
+        "massbattle": [
+            {
+                "text": "Your army and each enemy army suffers 2 attrition per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "After resolving the effects of a Support action, you may immediately perform a CHallenge action against an enemy cohort leader.",
+                "required": 2,
+                "extra": false
+            },
+            {
+                "text": "Increase the army's Strength and Discipline by 3 until the end of the scene.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "You and an hostile character picked by the GM restore 2 strife per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "You discover a neutral meeting place, a legal precedent,or similar safe haven.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "desc": [
+            {
+                "acting": "Act instinctually, inscrutably, or sagely.",
                 "descriptor": "Supernatural presences, flashes of premonition, instinctive warnings."
             }
         ]
