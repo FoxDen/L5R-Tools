@@ -137,6 +137,30 @@
                 "extra": false
             }
         ],
+        "massbattle": [
+            {
+                "text": "Remove 1 panic from your army per (op) spent",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Choose an allied leader. That leader's cohort cannot be targeted by Attacks until the end of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "Reduce the TN of your next check for making a deal with something strange or unfamiliar by 1.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Remove 1 strife for each Condition you are suffering from.",
+                "required": 1,
+                "extra": false
+            }
+        ],
         "desc": [
             {
                 "acting": "Act cautiously, calmly or throughly.",
@@ -282,6 +306,30 @@
                 "extra": true
             }
         ],
+        "massbattle": [
+            {
+                "text": "Choose an allied leader. Reduce their next TN for a Movement check by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Choose an enemy leader. That leader's cohort cannot perform Movement actions until the beginning of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "For each (op)(op) spent, an hostile character becomes friendlier towards you.",
+                "required": 2,
+                "extra": true
+            },
+            {
+                "text": "You learn one key feature, fortification, or terrain quality of the area, and wether enemis have passed through recently.",
+                "required": 2,
+                "extra": false
+            }
+        ],
         "desc": [
             {
                 "acting": "Act efficiently, flexibly or gregariously.",
@@ -423,6 +471,30 @@
         "shadowlands": [
             {
                 "text": "Next time someone else in the scene has to resist physical hardship or the influence of the Shadowlands the TN is lowered by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "massbattle": [
+            {
+                "text": "The enemy suffers from 1 panic per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "When attacking a cohort of a leader with Vigilance lower than the (op) spent, after resolving its effects inflict a critical stike with severity equal to one of your weapons.",
+                "required": 1,
+                "extra": true
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "Immediately attempt a Scholar skill check to learn about your situation or a NPC present, lowering the TN by 1.",
+                "required": 2,
+                "extra": false
+            },
+            {
+                "text": "Any number of characters may remove 1 strife per (op) spent, but you gain 1 strife per person.",
                 "required": 1,
                 "extra": true
             }
@@ -572,6 +644,30 @@
                 "extra": true
             }
         ],
+        "massbattle": [
+            {
+                "text": "Choose an allied leader. Reduce their next TN for a Scheme action by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Choose a leader in a fortification. That leader's cohort loses the benefits of the fortification till the beginning of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "You add a kept die showing (op) to your next Initiative check.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "You create a disguise. Next time you enter in a conflict, after Initiative, you pick one character who has to reroll all dice containing (su) results in their next check.",
+                "required": 2,
+                "extra": true
+            }
+        ],
         "desc": [
             {
                 "acting": "Acting smoothly, precisely, stealthily or subtly.",
@@ -687,6 +783,35 @@
             {
                 "text": "You ignore all (st) on the next check by drawing on memories of untainted lands.",
                 "required": 3,
+                "extra": false
+            }
+        ],
+        "massbattle": [
+            {
+                "text": "Your army and each enemy army suffers 2 attrition per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "After resolving the effects of a Support action, you may immediately perform a CHallenge action against an enemy cohort leader.",
+                "required": 2,
+                "extra": false
+            },
+            {
+                "text": "Increase the army's Strength and Discipline by 3 until the end of the scene.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "contestedterritory": [
+            {
+                "text": "You and an hostile character picked by the GM restore 2 strife per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "You discover a neutral meeting place, a legal precedent,or similar safe haven.",
+                "required": 2,
                 "extra": false
             }
         ],
