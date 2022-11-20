@@ -1,9 +1,11 @@
 <h4 style="text-align:center;margin:0px;">{{this.stance}}</h4>
+{{#if this.image}}
 <div style="text-align:center;">
-    <img height="50" style="border:none;" src="{{this.image}}" title="{{this.stance}}" width="50"/>
+    <img height="50" style="border:none;" src="{{this.image}}" title="{{this.stance}}" width="50" />
     <div><b>{{acting}}</b></div>
     <div><i>{{description}}</i></div>
 </div>
+{{/if}}
 <div>
     {{#if skill}}
     <h2>{{skill}}:</h2>
@@ -15,7 +17,7 @@
         {{#if required}}
             {{#times this.required}}(op){{/times}}{{#if extra}}+{{/if}}: 
         {{/if}}
-        {{this.text}}
+        {{this.text}} {{#if this.oppType}}<b>{{this.oppType}}</b>{{/if}}
     </div>
     {{/each}}
 </div>

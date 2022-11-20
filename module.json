@@ -1,15 +1,27 @@
 {
-  "name": "l5r-dragruler",
+  "id": "l5r-tools",
   "title": "L5R Tools",
-  "description": "A very small set of tools to help the Legend of the 5 Rings system.",
-  "author": "Lisa Ngo",
-  "minimumCoreVersion": "0.8.8",
-  "compatibleCoreVersion" : "9",
-  "socket":  true,
-  "systems": ["l5r5e"],
-  "esmodules": [
-    "scripts/main.js"
+  "description": "Toolset for Legend of the 5 Rings RPG 5e",
+  "version": "V.2.5",
+  "authors": [
+    {
+    "name": "Lysa",
+    "flags": {}
+    }
   ],
+  "esmodules": [
+    "index.js"
+  ],
+  "styles": [
+    "style.css"
+  ],
+  "compatibility": {
+    "minimum": "0.9",
+    "verified": "10"
+  },
+  "url": "https://github.com/FoxDen/L5R-Tools",
+  "readme": "https://github.com/FoxDen/L5R-Tools/blob/master/README.md",
+  "changelog": "https://github.com/FoxDen/L5R-Tools/releases/latest/",
   "languages": [
     {
       "lang": "en",
@@ -17,19 +29,37 @@
       "path": "lang/en.json"
     }
   ],
-  "dependencies": [
-    {
-      "name": "drag-ruler",
-      "type": "module",
-      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
-    },
-    {
-      "name": "lib-wrapper",
-      "type": "module"
-    }
-  ],
-  "version": "2.4.2",
-  "url": "https://github.com/FoxDen/L5R-Dragruler",
-  "download": "https://github.com/FoxDen/L5R-Dragruler/archive/master.zip",
-  "manifest": "https://raw.githubusercontent.com/FoxDen/L5R-Dragruler/master/module.json"
+  "relationships": {
+    "systems": [
+      {
+        "id": "l5r5e",
+        "type": "system",
+        "compatibility": {}
+      }
+    ],
+    "requires": [
+      {
+        "id": "drag-ruler",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
+      },
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json"
+      },
+      {
+        "id": "socketlib",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json",
+        "compatibility": {}
+      }
+    ]
+  },
+  "socket": true,
+  "manifest": "",
+  "download": "",
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
 }

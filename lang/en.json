@@ -1,17 +1,46 @@
 {
-  "l5r-dragruler": {
+  "TemplateESM": {
+    "title": "Template Svelte (ESM)"
+  },
+  "l5r-tools": {
     "settings": {
-      "dragRulerSupport": {
-        "name": "",
-        "hint": ""
+      "dragruler-helper": {
+        "name": "Drag Ruler",
+        "hint": "Enable range band display."
       },
       "setZeroBased": {
         "name": "Set zero based range band.",
         "hint": "Sets range band to begin at position 0."
+      },
+      "setTacticalBased": {
+        "name": "Tactical setting.",
+        "hint": "Sets range band to convert to yards instead of range bands."
+      },
+      "opportunity-helper": {
+        "name": "Opportunity Assistance.",
+        "hint": "Enable opportunity roll assistance."
+      },
+      "opportunity-helper-reduce": {
+        "name": "Opportunity popup size",
+        "hint": "Reduce size of opportunity popup."
+      },
+      "opportunity-helper-data": {
+        "name": "Dice Helper Journal",
+        "hint": "Dice helper suggestions will be read from this journal."
+      },
+      "opportunity-hide-filler": {
+        "name": "Hide extra text & image in opportunities popup",
+        "hint": "Dice helper suggestions will only display text and opportunities."
+      },
+      "actor-helper":{
+        "name": "Display Wounds",
+        "hint": "Enable wound display to resolve after a targeted roll."
       }
     },
     "square": "Square",
     "squares": "Squares",
+    "yard": "Yard",
+    "yards": "Yards",
     "environments": {
       "dangerous": "Dangerous",
       "defiled": "Defiled",
@@ -33,7 +62,6 @@
         "6": "6 Rangebands",
         "7": "7+ Rangebands"
       },
-
       "weapon_desc": {
         "touchRange": "Touch range (1-2 feet)",
         "swordRange": "Sword range (1-2 yards)",
@@ -53,6 +81,15 @@
         "sight": "Vision range",
         "out_of": "Out of range"
       }
+    },
+    "warning":{
+      "NoFind": "Failed to find journal - make sure it's created or something",
+      "InvalidData": "Dice helper: invalid data detected in journal"
+    },
+    "misc": {
+      "SpendResults": "Help Spend Results?",
+      "CritStrike": "Inflict a critical strike on your target with severity equal to your weapon's deadliness.",
+      "FailedOpps": "If you failed, provide assistance to the next character trying to accomplish the same action."
     }
   }
 }

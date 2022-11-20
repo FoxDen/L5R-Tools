@@ -1,0 +1,568 @@
+{
+    "Earth":{
+        "base":[
+            {
+                "text": "Reduce another character's (st) by 2.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Act extremely carefully. Additional (op) spent makes the attempt even safer.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Recall a piece of information not related to your check, or reveal a small preparatory action taken earlier (at GM discretion).",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "skills":{
+            "artisan": { "text": "If successful, add the Durable quality to an item you're restoring.", "required": 1},
+            "scholar": { "text": "Remember a place where you can research the topic you were attempting to recall.", "required": 1},
+            "social": { "text": "Increase the TN of another character's next Social check made before the end of the scene by 1.", "required": 1},
+            "trade": { "text": "Reduce the TN of another character's next check made with the same skill before the end of this scene by 1.", "required": 1},
+            "initiative": { "text": "Choose another character's disadvantage you know. They do not apply it this scene.", "required": 1}
+        },
+        "tainted":{
+            "self":
+            {
+                "text":"No mortal concern can slow you, as you already endure worse than most can even imagine. For the rest of the scene, whenever you suffer fatigue reduce the value suffered by 2, to a minimum of 0. ",
+                "required":2,
+                "extra": false,
+                "oppType": "Taint effect"
+            },
+            "other":{
+                "text": "You are able to weather such terrible things as the revelation of a secret mahō-tsukai or the summoning of an oni. The next time you suffer (st) this scene, you suffer 2 fewer (st), to a minimum of 0. ",
+                "required": 2,
+                "extra": false,
+                "oppType": "Taint effect"
+            }
+        },
+        "conflict":[
+            {
+                "text": "During a Movement check, ignore one terrain quality of your choice.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Reduce the severity of the next critical strike you suffer before your next turn by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Do not apply one of your disadvantages to checks until the end of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "invocation":[
+            {
+                "text": "Increase your physical resistance by 1. The effect persists until the beginning of your next turn.",
+                "required": 1,
+                "extra": false,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "This effect inflicts phyical damage instead of supernatural.",
+                "required": 1,
+                "extra": false,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "The damage inflicted by this technique has the Sacred quality.",
+                "required": 1,
+                "extra": false,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "If this technique can target characters other than you, choose an additional target per (op) spent this way.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "Treat the maximum range of this technique as 1 higher per (op) spent this way.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Invocation effect"
+            }
+        ],
+        "downtime":[
+            {
+                "text": "Another character in your company can take off either 1 fatigue or 1 (st) per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Memorize a small and vital detail that can be freely recalled.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "desc":[
+            {
+                "acting":"Act cautiously, calmly or throughly.", 
+                "descriptor": "Your own memories, the history of people and objects, defensive positions."
+            }
+        ]
+    },
+    "Water":{
+        "base":[
+            {
+                "text": "Recover 2 (st).",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "You perform the task efficiently. Additional (op) spent reduces time and materials needed.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Spot a physical detail not related to your check or add a previously unnoticed area of terrain or mundane item to your location (at GM discretion).",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "skills":{
+            "artisan": { "text": "Add a kept (ring) set to an (op) result the next Artisan check made this session.", "required": 1},
+            "scholar": { "text": "Spot a unique or identifying quality, aspect or ability of something you're identifying.", "required": 1},
+            "social": { "text": "Add a kept (ring) to an (op) result of your next Social check before the end of the scene.", "required": 1},
+            "trade": { "text": "Get a 10% discount purchasing an item.", "required": 1},
+            "initiative": { "text": "Assess all terrain qualities in the scene.", "required": 1},
+            "healing": { "text": "When applying First Aid, spend (op)(op) to affect one additional target per (op)(op) spent this way.", "required":2, "extra": true}
+        },
+        "conflict":[
+            {
+                "text": "Remove 1 fatigue.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "During an Attack action ignore 1 point of physical resistance per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Move one range band.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "tainted":{
+            "self":
+            {
+                "text": "You briefly become fluid in mind or body, shaking off disorientation or even injury. You remove one of the following conditions: Dazed, Disoriented, Immobilized, Intoxicated, Lightly Wounded, or Prone. ",
+                "required": 1,
+                "extra": false,
+                "oppType": "Taint effect"
+            },
+            "other":{
+                "text": "You adapt yourself to better fight the corrupted power before you. Once before the end of current the game session you may either reduce the TN of a check to resist a Tainted power, such as a mahō technique, assailing you by 1 or increase the TN of another character’s check to target or affect you with such a power by 1. ",
+                "required": 2,
+                "extra": false,
+                "oppType": "Taint effect"
+            }
+        },
+        "invocation":[
+            {
+                "text": "Increase your supernatural resistance by 1. The effect persists until the end of your next turn.",
+                "required": 1,
+                "extra": false,
+                "oppType": "Invocation effect"
+            },            
+            {
+                "text": "Reduce the TN of the next supporrt action check you make by 1. This effect persists until the end of your turn.",
+                "required": 1,
+                "extra": false,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "If this technique can target characters other than you, choose an additional target per (op) spent this way.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "Remove 1 fatigue from the target or yourself.",
+                "required": 2,
+                "extra": false,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "Treat the maximum or minimum range of this technique as 1 higher or lower per (op) spent this way.",
+                "required": 2,
+                "extra": true,
+                "oppType": "Invocation effect"
+            }
+        ],
+        "downtime":[
+            {
+                "text": "Remove 1 (st) or 1 fatigue per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "During your activity you make a new friend.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "desc":[            
+        {
+            "acting":"Act efficiently, flexibly or gregariously.", 
+            "descriptor": "Environmental design, presence of useful terrain or objects, escape routes."
+        }       
+        ]
+    },
+    "Fire":{
+        "base":[
+            {
+                "text": "Inflict 2 (st) on another character.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "You are impressive and flashy. Additional (op) spent this way will make you even more noticable.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "You notice a missing detail not related to your check. You can create an absence in the scene (at GM discretion).",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "skills":{
+            "artisan": { "text": "If you succeed, make an extra copy of the item you are creating.", "required": 1},
+            "scholar": { "text": "Disern a character's motivations or desires.", "required": 1},
+            "social": { "text": "Reduce the TN of another character's next Social check by 1.", "required": 1},
+            "trade": { "text": "Add a kept (ring) set to an (op) result to the next check you make with another skill.", "required": 1},
+            "initiative": { "text": "Use your focus instead of your initiative when surprised.", "required": 1}
+        },
+        "conflict":[
+            {
+                "text": "Increase the TN of another character's next check by 1 if it does not target you.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Increase the TN of the next chack a character makes to resist a Critical Strike before your next turn by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Characters must suffer 2 (st) to choose you as the target of Attack/Scheme actions until the end of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ], 
+        "tainted":{
+            "self":
+            {
+                "text": "The furious power of Jigoku flows through you, granting you unnatural might. Add 1 kept (ring) showing a (st) result to the next Martial Arts check you make. This effect persists until the start of their next turn.",
+                "required": 2,
+                "extra": false,
+                "oppType": "Taint effect"
+            },
+            "other":{
+                "text": "The righteous fury you display can cow even the most terrible of Tainted fiends. Each Tainted being in the scene gains 1 (st), plus 1 additional (st) for every (op)(op) spent. If you are unaware if another character is Tainted, the GM should record this strife secretly.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Taint effect"
+            }
+        },
+        "invocation":[
+            {
+                "text": "Reduce the TN of the next Attack action check you make by 1. This effect persists until the end of your next turn.",
+                "required": 1,
+                "extra": false,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "Treat the maximum range of this technique as 1 higher per (op) spent this way.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "If this technique can target characters other than you, choose an additional target per (op) spent this way.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "Increase the TN of checks to resist this effect by 1 per (op) spent this way.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "One target per (op)(op) spent this way must resist with a TN 3 Fitness Check (Air 4, Water 1) or suffer the Burning condition.",
+                "required": 2,
+                "extra": true,
+                "oppType": "Invocation effect"
+            }
+        ],
+        "downtime":[
+            {
+                "text": "Assist another character with their next downtime check per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Another character may perform another downtime activity, up to a maximum of 2.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "desc":[
+            {
+                "acting":"Acting creatively, fearsomely or noticeably.",
+                "descriptor": "People's motivations, flashes of insight, conspicuous absences."
+            }
+        ]
+    },
+    "Air":{
+        "base":[
+            {
+                "text": "Learn a character's demeanor and current (st).",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "You are very subtle. Additional (op) spent this way increases the subtlety of your method.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Observe a detail about a character, or add a small detail to an NPC (at GM discretion).",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "skills":{
+            "artisan": { "text": "If successful, add the Resplendent or Subtle quality to an item you're refining.", "required": 1},
+            "scholar": { "text": "Learn something about the person who created/used the item you're studying.", "required": 1},
+            "social": { "text": "Learn of the Honor/Glory/Status of a character is higher, lower or equal to yours.", "required": 1},
+            "trade": { "text": "Sell an item for 10% more.", "required": 1},
+            "initiative": { "text": "Discover a foe's Disadvantage (their choice).", "required": 1}
+        },
+        "conflict":[
+            {
+                "text": "Add a kept (ring) set to a (op) result for your next Martial check.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "During a Movement action check, 1 range band of any distance you move per (op) spent may be vertical.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Increase the TN of the next Martial Arts [Ranged] check targeting you before your next turn by 2.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "tainted":{
+            "self":
+            {
+                "text": "Your newfound cunning is able to redirect attention away from you, potentially concealing your Tainted nature or letting you avoid scrutiny. The TN of the next check made to scrutinize you or your actions is increased by 1.",
+                "required": 2,
+                "extra": false,
+                "oppType": "Taint effect"
+            },
+            "other":
+            {
+                "text": "Confronted with the horrors of the Taint, you remain alert and able to discern a weakness in your foe. Reduce the TN of your next check made to oppose or harm a Tainted character by 1, as you examine the threat before you and formulate an appropriate response.",
+                "required": 2,
+                "extra": false,
+                "oppType": "Taint effect"
+            }
+        },
+        "invocation":[
+            {
+                "text": "Reduce the TN of the next movement action check you make by 1. This effect persists until the end of your next turn.",
+                "required": 1,
+                "extra": false,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "Treat the maximum range of this technique as 1 higher per (op) spent this way.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "If this technique can target characters other than you, choose an additional target per (op) spent this way.",
+                "required": 2,
+                "extra": true,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "If this technique targets all characters in an area, choose 1 characer in range to exclude as a target per (op)(op) spent this way.",
+                "required": 2,
+                "extra": true,
+                "oppType": "Invocation effect"
+            },
+            {
+                "text": "Choose one additional target per (op)(op) spent this way.",
+                "required": 2,
+                "extra": true,
+                "oppType": "Invocation effect"
+            }
+        ],
+        "downtime":[
+            {
+                "text": "Learn a detail, such as an advantage or a disadvantage of their choice, from a character in your company, per (op) spent. Max 1 detail per person.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Perform your downtime activities in secret, without letting others know.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "desc":[
+            {
+                "acting":"Acting smoothly, precisely, stealthily or subtly.", 
+                "descriptor": "People's strengths and weaknesses, emotions and small details."
+            }
+        ]
+    },
+    "Void":{
+        "base":[
+            {
+                "text": "Name another ring. If your next check uses that ring, reduce its TN by 1.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "Detect a sign of the supernatural, more (op) spent reveals a more precise location.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Gain insight into the nature of the universe or your own heart. Reveal a yet unknown fact about your character that relates to the current situation (at GM discretion).",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "skills":{
+            "artisan": { "text": "Reduce the TN of your next check to use the item you are attuning to by 1.", "required": 1},
+            "scholar": { "text": "Realize whether or not the angle of inquiry under investigation is worthwhile.", "required": 1},
+            "social": { "text": "Learn another character's objective.", "required": 1},
+            "trade": { "text": "Reduce your effect on the environment (and physical traces of your efforts) to a minimum.", "required": 1},
+            "initiative": { "text": "Sense if there is an otherworldly being present in the scene.", "required": 1}
+        },
+        "conflict":[
+            {
+                "text": "During your next Attack action, ignore one terrain quality of your choice.",
+                "required": 1,
+                "extra": false
+            },
+            {
+                "text": "During a Support check, increase your initiative by 1 per (op) spent.",
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Ignore the effects of one condition you are suffering until the end of your next turn.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "tainted":{
+            "self":
+            {
+                "text": "The unnatural insights of the kansen voice themselves wordlessly to you, granting knowledge you could not possibly have known otherwise. You learn something relevant to the current situation, appropriate in scope to the number of (op) spent. For each (op) spent in this way, you receive 1 (st) due to the unnatural means by which you gained this knowledge.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Taint effect"
+            },
+            "other":
+            {
+                "text": "If the character spends (op)(op), they discern that the kami have fled, as well as the type of disturbance (mahō, kansen, or similar). If the character spends (op)(op)(op), they can also determine the total combat threat rating of all Tainted beings that caused the kami to flee.",
+                "required": 2,
+                "extra": false,
+                "oppType": "Taint effect"
+            }
+        },
+        "downtime":[
+            {
+                "text": "Reserve one dropped die per (op) spent, up to the character's level in the skill, which can be added as a kept die in your next check with this skill.", 
+                "required": 1,
+                "extra": true
+            },
+            {
+                "text": "Have a premonition of a future event.",
+                "required": 2,
+                "extra": false
+            }
+        ],
+        "desc":[
+            {
+                "acting":"Act instinctually, inscrutably, or sagely.", 
+                "descriptor": "Supernatural presences, flashes of premonition, instinctive warnings."
+            }
+        ]
+    },
+    "Weapons":{
+        "Qualities":{
+            "Snaring":{
+                "text": "One target of the attack with vigilance lower than or equal to the (op) spent this way suffers the Immobilized condition.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Snaring effect"
+            },
+            "Razor-Edged":{
+                "text": "Treat the deadliness of this weapon as 1 higher per (op) spent this way.",
+                "required": 1,
+                "extra": true,
+                "oppType": "Razor-edged effect"
+            }
+        },
+        "WeaponName":{
+            "yoroidoshi":{
+                "text": "Your target treats their physical resistance as 2 lower. this effect persists until the end of your next turn.",
+                "required": 1,
+                "extra": false,
+                "oppType": "Yoroi-Doshi effect"
+            }, 
+            "flyssa":{
+                    "text": "Ignore 1 point of your target's physical resistance per (op)(op) spent this way.",
+                    "required": 2,
+                    "extra": true,
+                    "oppType": "Flyssa effect"
+            },
+            "genno":{
+                    "text": "If you succeed but your target reduces the damage of this attack to 0, they suffer the Dazed and Prone conditions.",
+                    "required": 2,
+                    "extra": false,
+                    "oppType": "Genno effect"
+            },
+            "tsurihashi":{
+                    "text": "If you succeed but your target reduces the damage of this attack to 0, their armor gains the Damaged quality and they suffer the Bleeding condition.",
+                    "required": 2,
+                    "extra": false,
+                    "oppType": "Tsuruhashi effect"
+            },
+            "kaiunoyumi":{
+                    "text": "After performing an Attack action, immediately prepare this weapon for use again.",
+                    "required": 2,
+                    "extra": false,
+                    "oppType": "Kaiu no Yumi effect"
+            },
+            "stormbow":{
+                    "text": "Each character at range 0-1 of your initial target also becomes a target of this attack.",
+                    "required": 1,
+                    "extra": false,
+                    "oppType": "Storm bow effect"
+            }
+        }
+    }
+    
+}
