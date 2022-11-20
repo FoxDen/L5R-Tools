@@ -57,8 +57,8 @@
     ]
   },
   "socket": true,
-  "manifest": "",
-  "download": "",
+  "manifest": "https://raw.githubusercontent.com/FoxDen/L5R-Tools/master/module.json",
+  "download": "https://github.com/FoxDen/L5R-Tools/archive/master.zip",
   "protected": false,
   "coreTranslation": false,
   "library": false
