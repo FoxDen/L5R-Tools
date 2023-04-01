@@ -491,6 +491,9 @@
                 "oppType": "Taint effect"
             }
         },
+        "invocation":[
+            
+        ],
         "downtime":[
             {
                 "text": "Reserve one dropped die per (op) spent, up to the character's level in the skill, which can be added as a kept die in your next check with this skill.", 
